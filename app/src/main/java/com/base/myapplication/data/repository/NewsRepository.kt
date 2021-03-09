@@ -11,9 +11,9 @@ import com.base.myapplication.network.BaseDataSource
 import com.base.myapplication.network.Resource
 
 class NewsRepository(private val api: ApiInterface) : BaseDataSource() {
-    fun getData(q: String, apiKey: String): Flow<Resource<ResponseData>> {
+    fun getData(q: String, page: Int): Flow<Resource<ResponseData>> {
         return flow {
-            emit(getResult { api.getAllNews(q, apiKey) })
+            emit(getResult { api.getAllNews(q, page) })
         }.onStart { emit(Resource.loading()) }.flowOn(Dispatchers.IO)
     }
 }

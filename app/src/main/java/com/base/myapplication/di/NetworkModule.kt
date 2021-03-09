@@ -6,6 +6,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.base.myapplication.BuildConfig
+import com.base.myapplication.network.Constant.BASEURL
 import java.util.concurrent.TimeUnit
 
 val networkModule = module {
@@ -36,6 +37,6 @@ val networkModule = module {
 
     single { provideHttpClient() }
     single {
-        provideRetrofit(get(), "http://newsapi.org/v2/")
+        provideRetrofit(get(), BASEURL)
     }
 }

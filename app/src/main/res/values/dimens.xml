@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvHeadline">16dp</dimen>
+    <dimen name="tvTitle">14dp</dimen>
+    <dimen name="tvSubTitle">13dp</dimen>
+    <dimen name="tvContent">12dp</dimen>
+
+    <dimen name="margin">6dp</dimen>
+</resources>
